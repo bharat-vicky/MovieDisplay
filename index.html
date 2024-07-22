@@ -3,28 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Movie Display Page</title>
     <style>
-        
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
+        body {
+            font-family: Arial, sans-serif;
             background-color: #D2D2D2;
             background-image:
-            repeating-linear-gradient(
-                to right, transparent 0 100px,
-                #25283b22 100px 101px
-            ),
-            repeating-linear-gradient(
-                to bottom, transparent 0 100px,
-                #25283b22 100px 101px
-            );
+                repeating-linear-gradient(
+                    to right, transparent 0 100px,
+                    #25283b22 100px 101px
+                ),
+                repeating-linear-gradient(
+                    to bottom, transparent 0 100px,
+                    #25283b22 100px 101px
+                );
         }
-        
-        body::before{
+        body::before {
             position: absolute;
             width: min(1400px, 90vw);
             top: 10%;
@@ -38,32 +37,110 @@
             background-position: top center;
             pointer-events: none;
         }
+        .container {
+            width: 80%;
+            margin: 100px auto;
+            text-align: center;
+            perspective: 1000px;
+        }
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        .movie {
+            margin: 20px;
+            display: inline-block;
+            width: 200px;
+            height: 300px;
+            position: relative;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            background-color: #fff;
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .movie img {
+            width: 100%;
+            height: auto;
+        }
+        .movie-title {
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .movie:hover {
+            transform: rotateY(20deg) rotateX(10deg);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     </style>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="banner">
-        <div class="slider" style="--quantity: 10">
-            <div class="item" style="--position: 1"><img src="images/dragon_1.jpg" alt=""></div>
-            <div class="item" style="--position: 2"><img src="images/dragon_2.jpg" alt=""></div>
-            <div class="item" style="--position: 3"><img src="images/dragon_3.jpg" alt=""></div>
-            <div class="item" style="--position: 4"><img src="images/dragon_4.jpg" alt=""></div>
-            <div class="item" style="--position: 5"><img src="images/dragon_5.jpg" alt=""></div>
-            <div class="item" style="--position: 6"><img src="images/dragon_6.jpg" alt=""></div>
-            <div class="item" style="--position: 7"><img src="images/dragon_7.jpg" alt=""></div>
-            <div class="item" style="--position: 8"><img src="images/dragon_8.jpg" alt=""></div>
-            <div class="item" style="--position: 9"><img src="images/dragon_9.jpg" alt=""></div>
-            <div class="item" style="--position: 10"><img src="images/dragon_10.jpg" alt=""></div>
+    <div class="container">
+        <h1 data-content="Movie Display">Movie Display</h1>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_1.jpg" alt="Movie 1">
+                <div class="movie-title">Movie 1</div>
+            </a>
         </div>
-        <div class="content">
-            <h1 data-content="Bharat">
-                Hridayanand
-            </h1>
-            
-            <div class="model"></div>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_2.jpg" alt="Movie 2">
+                <div class="movie-title">Movie 2</div>
+            </a>
         </div>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_3.jpg" alt="Movie 3">
+                <div class="movie-title">Movie 3</div>
+            </a>
+        </div>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_4.jpg" alt="Movie 4">
+                <div class="movie-title">Movie 4</div>
+            </a>
+        </div>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_5.jpg" alt="Movie 5">
+                <div class="movie-title">Movie 5</div>
+            </a>
+        </div>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_6.jpg" alt="Movie 6">
+                <div class="movie-title">Movie 6</div>
+            </a>
+        </div>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_7.jpg" alt="Movie 7">
+                <div class="movie-title">Movie 7</div>
+            </a>
+        </div>
+        <div class="movie">
+            <a href="movie-detail.html">
+                <img src="images/dragon_8.jpg" alt="Movie 8">
+                <div class="movie-title">Movie 8</div>
+            </a>
+        </div>
+
+        <!-- Add more movie divs as needed -->
     </div>
-    
+
 </body>
 </html>
