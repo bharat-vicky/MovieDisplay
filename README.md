@@ -1,2 +1,2 @@
 # Web-Design
-3D Web Page for Holliwood Movies
+3D Web Page for Hollywood Movies.
